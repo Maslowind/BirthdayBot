@@ -84,8 +84,8 @@ app.post("/", async function (req, res) {
     if (message.text != undefined) {
         console.log(message);
         if (message.text.toLowerCase().indexOf("/info") != -1) {
-            let infoMessage = `Привет! Я бот, который напоминает о ДР твоих друзей. Вот список моих команд:\nДобавить друга в список напоминания: "/setbirthday @username DD.MM" \n
-            Посмотреть список друзей и их ДР: "/getbdlist"\nУдалить друга из списка:"/delete @username"`
+            let infoMessage = `Привет! Я бот, который напоминает о ДР твоих друзей. Вот список моих команд:\nДобавить друга в список напоминания: "/setbirthday @username DD.MM"
+Посмотреть список друзей и их ДР: "/getbdlist"\nУдалить друга из списка:"/delete @username"`
             sendMessage(telegram_url, message.chat.id, infoMessage);
 
         } else if (message.text.toLowerCase().indexOf("/setbirthday") != -1) {
