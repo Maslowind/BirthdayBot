@@ -1,7 +1,7 @@
 module.exports = async function delUserData(user_id, username) {
     const mongoose = require('mongoose');
     const MongoURI = process.env.MONGO_URI;
-    const user_struct = require('./data_struc.ts');
+    const user_struct = require('./data_struc');
     let User = mongoose.model('User', user_struct, "BDDB");
     mongoose.connect(MongoURI, { useNewUrlParser: true })
 

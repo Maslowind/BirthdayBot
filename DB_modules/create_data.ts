@@ -1,7 +1,7 @@
 module.exports = function createNewData(user_id, username, date) {
   const mongoose = require('mongoose');
   const MongoURI = process.env.MONGO_URI;
-  const user_struct = require('./data_struc.ts');
+  const user_struct = require('./data_struc');
   let User = mongoose.model('User', user_struct, "BDDB");
   mongoose.connect(MongoURI, { useNewUrlParser: true })
 
